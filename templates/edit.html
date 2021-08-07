@@ -1,0 +1,26 @@
+//templates/edit.html
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{mahasiswa.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" value="{{mahasiswa.name}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="jurusan" value="{{mahasiswa.jurusan}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="ipk" value="{{mahasiswa.ipk}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
